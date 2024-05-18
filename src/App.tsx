@@ -1,11 +1,21 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SideBar from "./components/Sidebar/Sidebar.";
-import AppRoutes from "./routes/AppRoutes";
+import routes from "./routes/routes";
 
 function App() {
   return (
     <>
       <SideBar/>
-      <AppRoutes/>
+      <BrowserRouter>
+        <Routes>
+          {routes.map((route, index) => (
+            <Route
+              key={index}
+              element={<route.component />}
+            />
+          ))}
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
