@@ -16,7 +16,7 @@ export default function SideBar() {
   
   return (
     <>
-      <div className="bg-sidebar min-h-screen absolute left-0 top-0 min-w-72 max-w-60">
+      <div className="bg-sidebar min-h-screen min-w-72 max-w-60">
         <ProfileContent image={profile} name="Vinicius Luna" />
         {routes.map((route, i) => (
           route.name && <MenuContent label={String(route.name)} key={i} onClick={function (): void {

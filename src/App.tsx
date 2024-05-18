@@ -5,16 +5,21 @@ import routes from "./routes/routes";
 function App() {
   return (
     <>
-      <SideBar/>
       <BrowserRouter>
-        <Routes>
-          {routes.map((route, index) => (
-            <Route
-              key={index}
-              element={<route.component />}
-            />
-          ))}
-        </Routes>
+        <div className="flex flex-row h-screen w-screen">
+          <SideBar />
+          <div className="w-screen">
+            <Routes>
+              {routes.map((route, index) => (
+                <Route
+                  key={index}
+                  path={route.path}
+                  element={<route.component />}
+                />
+              ))}
+            </Routes>
+          </div>
+        </div>
       </BrowserRouter>
     </>
   );
