@@ -9,7 +9,10 @@ export default {
       colors: {
         sidebar: '#242424',
         sidebarColor: '#434343',
-      }
+      },
+      fontFamily: {
+        nunito: ['Nunito', 'sans-serif'],
+      },
     },
   },
   plugins: [],
