@@ -19,7 +19,7 @@ export default function SideBar() {
       <div className="bg-sidebar min-h-screen min-w-72 max-w-60">
         <ProfileContent image={profile} name="Vinicius Luna" />
         {routes.map((route, i) => (
-          route.name && <MenuContent label={String(route.name)} key={i} onClick={function (): void {
+          route.name && <MenuContent icon={<route.sidebarIcon className="mr-3" />} label={String(route.name)} key={i} onClick={function (): void {
             throw new Error("Function not implemented.");
           } } />
         ))}
