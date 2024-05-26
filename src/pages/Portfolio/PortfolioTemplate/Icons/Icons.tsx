@@ -10,7 +10,7 @@ export default function Icons() {
   ];
   
   return (
-    <div className="flex gap-7">
+    <div className="flex flex-wrap gap-7">
       {urls.map((url, i) => (
         <motion.div key={i}  whileHover={{ scale: 1.6 }}>
           <SocialIcon url={url} href={url}/>

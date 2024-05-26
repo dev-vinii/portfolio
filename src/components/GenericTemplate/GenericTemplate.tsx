@@ -9,7 +9,7 @@ export default function GenericTemplate(props: {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-2/3 w-2/3 bg-sidebar shadow-2xl shadow-black rounded-xl p-8 flex flex-col"
+      className="min-h-2/3 w-2/3 bg-sidebar shadow-2xl shadow-black rounded-xl p-8 flex flex-col max-sm:absolute max-sm:top-32 max-xl:absolute max-xl:top-20 max"
     >
         {props.children}
     </motion.div>

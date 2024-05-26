@@ -17,7 +17,7 @@ export default function PortfolioTemplate() {
       <div className="mt-6">
         <List />
       </div>
-      <div className="mt-8 flex items-center gap-7">
+      <div className="mt-8 flex items-center gap-7 flex-wrap">
         <SiTypescript className="h-10 w-10" />
         <SiNestjs className="h-10 w-10" />
         <FaReact className="h-10 w-10" />
