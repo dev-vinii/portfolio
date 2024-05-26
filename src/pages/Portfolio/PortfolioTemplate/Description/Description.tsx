@@ -3,10 +3,10 @@ export default function Description() {
     <>
       <div className="font-bold text-2xl mb-4 font-nunito">Descrição</div>
       <div className="font-nunito">
-        Olá, me chamo Vinicius e tenho 20 anos. Sou estudante de Análise e
-        Desenvolvimento de Sistemas. Sou desenvolvedor full stack e estou
-        acostumado lidar com as linguagens JavaScript/TypeScript, Node e Vue. Na
-        parte de banco de dados, possuo conhecimento com SQL.
+        Olá, sou Vinicius, um estudante de Análise e Desenvolvimento de Sistemas
+        com 20 anos de idade e uma paixão por tecnologia. Como desenvolvedor
+        full stack, tenho experiência sólida em JavaScript/TypeScript, Node.js e
+        Vue.js, além de habilidades em bancos de dados SQL e Docker.
       </div>
     </>
   );
