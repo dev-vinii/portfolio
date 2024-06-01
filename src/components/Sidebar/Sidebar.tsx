@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import { motion } from "framer-motion";
 
 export default function SideBar() {
   const navigate = useNavigate();
@@ -15,15 +16,15 @@ export default function SideBar() {
   };
 
   const windowSize = () => window.innerWidth > 1280;
-  
+
   useEffect(() => {
     const handleResize = () => {
       setShowSidebar(windowSize());
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const [showSidebar, setShowSidebar] = useState(windowSize);
@@ -31,25 +32,41 @@ export default function SideBar() {
   return (
     <>
       <div className="absolute left-0 top-0 cursor-pointer max-xl:z-20">
-        {showSidebar || <IoIosMenu className="h-10 w-10" onClick={() => setShowSidebar(true)} />}
-        {showSidebar && !windowSize() && <IoMdClose className="h-10 w-10" onClick={() => setShowSidebar(false)} />}
+        {showSidebar || (
+          <IoIosMenu
+            className="h-10 w-10"
+            onClick={() => setShowSidebar(true)}
+          />
+        )}
+        {showSidebar && !windowSize() && (
+          <IoMdClose
+            className="h-10 w-10"
+            onClick={() => setShowSidebar(false)}
+          />
+        )}
       </div>
       {showSidebar && (
-        <div className="bg-sidebar min-h-screen min-w-72 max-w-60 max-xl:absolute max-xl:left-0 max-xl:top-0 max-xl:z-10">
-          <ProfileContent image={profile} name="Vinicius Luna" />
-          {routes.map(
-            (route, i) =>
-              route.name && (
-                <MenuContent
-                  path={route.path}
-                  icon={<route.sidebarIcon className="mr-3" />}
-                  label={String(route.name)}
-                  key={i}
-                  onClick={() => handleClickMenu(route.path)}
-                />
-              )
-          )}
-        </div>
+        <motion.div
+          initial={{ position: "absolute", left: -400 }}
+          animate={{ position: "absolute", left: 0, transitionEnd: { position: "unset" } }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="bg-sidebar min-h-screen min-w-80">
+            <ProfileContent image={profile} name="Vinicius Luna" />
+            {routes.map(
+              (route, i) =>
+                route.name && (
+                  <MenuContent
+                    path={route.path}
+                    icon={<route.sidebarIcon className="mr-3" />}
+                    label={String(route.name)}
+                    key={i}
+                    onClick={() => handleClickMenu(route.path)}
+                  />
+                )
+            )}
+          </div>
+        </motion.div>
       )}
     </>
   );
