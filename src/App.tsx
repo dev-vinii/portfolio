@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
         <div className="flex flex-row h-screen w-screen">
           <SideBar />
-          <div className="w-screen">
+          <div className="w-full">
             <Routes>
               {routes.map((route, index) => (
                 <Route
