@@ -31,7 +31,7 @@ export default function SideBar() {
 
   return (
     <>
-      <div className="min-w-screen flex justify-end text-sidebar">
+      <div className="min-w-screen flex justify-end text-sidebar xl:hidden">
         <IoIosMenu
           className="h-10 w-10"
           onClick={() => setShowSidebar(!showSidebar)}
@@ -47,7 +47,7 @@ export default function SideBar() {
           }}
           transition={{ duration: 0.7 }}
         >
-          <div className="bg-sidebar min-h-screen w-80 max-xl:absolute max-xl:left-0 max-xl:top-0 ">
+          <div className="bg-sidebar min-h-screen w-80 max-xl:absolute max-xl:left-0 max-xl:top-0">
             <ProfileContent image={profile} name="Vinicius Luna" />
             {routes.map(
               (route, i) =>
