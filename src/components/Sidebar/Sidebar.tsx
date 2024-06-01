@@ -5,7 +5,6 @@ import routes from "@/routes/routes";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
-import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 
 export default function SideBar() {
@@ -31,7 +30,7 @@ export default function SideBar() {
 
   return (
     <>
-      <div className="min-w-screen flex justify-end text-sidebar xl:hidden">
+      <div className="min-w-screen flex justify-end text-sidebar xl:hidden cursor-pointer">
         <IoIosMenu
           className="h-10 w-10"
           onClick={() => setShowSidebar(!showSidebar)}
