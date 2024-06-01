@@ -7,11 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        sidebar: '#242424',
-        sidebarColor: '#434343',
+        sidebar: '#121435',
+        sidebarColor: '#16194A',
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
+        oleo: ['Oleo Script', 'sans-serif']
       },
     },
   },
