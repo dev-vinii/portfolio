@@ -31,27 +31,23 @@ export default function SideBar() {
 
   return (
     <>
-      <div className="absolute left-0 top-0 cursor-pointer max-xl:z-20">
-        {showSidebar || (
-          <IoIosMenu
-            className="h-10 w-10"
-            onClick={() => setShowSidebar(true)}
-          />
-        )}
-        {showSidebar && !windowSize() && (
-          <IoMdClose
-            className="h-10 w-10"
-            onClick={() => setShowSidebar(false)}
-          />
-        )}
+      <div className="min-w-screen flex justify-end text-sidebar">
+        <IoIosMenu
+          className="h-10 w-10"
+          onClick={() => setShowSidebar(!showSidebar)}
+        />
       </div>
       {showSidebar && (
         <motion.div
           initial={{ position: "absolute", left: -400 }}
-          animate={{ position: "absolute", left: 0, transitionEnd: { position: "unset" } }}
+          animate={{
+            position: "absolute",
+            left: 0,
+            transitionEnd: { position: "unset" },
+          }}
           transition={{ duration: 0.7 }}
         >
-          <div className="bg-sidebar min-h-screen min-w-80">
+          <div className="bg-sidebar min-h-screen w-80 max-xl:absolute max-xl:left-0 max-xl:top-0 ">
             <ProfileContent image={profile} name="Vinicius Luna" />
             {routes.map(
               (route, i) =>

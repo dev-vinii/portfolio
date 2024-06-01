@@ -6,9 +6,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="flex flex-row h-screen w-screen">
+        <div className="flex flex-row h-screen w-screen max-xl:flex-col">
           <SideBar />
-          <div className="w-full">
+          <div className="w-full h-full">
             <Routes>
               {routes.map((route, index) => (
                 <Route

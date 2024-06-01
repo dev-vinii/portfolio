@@ -23,11 +23,11 @@ export default function MenuContent(props: {
     <div
       className={`h-10 font-oleo cursor-pointer flex justify-start pl-10 
       items-center w-full rounded-lg bg-sidebar transition-all delay-100 hover:bg-sidebarColor hover:font-bold
-      tracking-wider ${isActive ? 'bg-sidebarColor font-bold' : ''} `}
+      tracking-wider text-white  ${isActive ? 'bg-sidebarColor font-bold' : ''} `}
       onClick={props.onClick}
     >
       {props.icon}
-      <span className="decoration-white">{props.label}</span>
+      <span>{props.label}</span>
     </div>
   );
 }

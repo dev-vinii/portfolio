@@ -12,7 +12,8 @@ export default {
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
-        oleo: ['Oleo Script', 'sans-serif']
+        oleo: ['Oleo Script', 'sans-serif'],
+        taviraj: ['Taviraj', 'sans-serif']
       },
     },
   },
