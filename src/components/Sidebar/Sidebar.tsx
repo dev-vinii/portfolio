@@ -46,7 +46,7 @@ export default function SideBar() {
           }}
           transition={{ duration: 0.7 }}
         >
-          <div className="bg-sidebar min-h-screen w-80 max-xl:absolute max-xl:left-0 max-xl:top-0">
+          <div className="bg-sidebar min-h-screen w-80 z-30 max-xl:absolute max-xl:left-0 max-xl:top-0">
             <ProfileContent image={profile} name="Vinicius Luna" />
             {routes.map(
               (route, i) =>
