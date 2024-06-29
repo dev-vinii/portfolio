@@ -9,8 +9,8 @@ export default function Profile() {
           Olá, sou Vinicius, um estudante de Análise e Desenvolvimento de
           Sistemas com 20 anos de idade e uma paixão por tecnologia. Como
           desenvolvedor full stack, tenho experiência sólida em
-          JavaScript/TypeScript, Node.js e Vue.js, além de habilidades em bancos
-          de dados SQL e Docker.
+          JavaScript/TypeScript, React.js, Node.js e Vue.js, além de habilidades
+          em bancos de dados SQL e Docker.
         </span>
         <div className="max-sm:mb-3">
           <span className="font-bold">Soft Skills: </span>
