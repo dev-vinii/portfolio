@@ -50,16 +50,7 @@ export default function SideBar() {
 				/>
 			</div>
 			{showSidebar && (
-				<motion.div
-					ref={sidebarRef}
-					initial={{ position: "absolute", left: -400 }}
-					animate={{
-						position: "absolute",
-						left: 0,
-						transitionEnd: { position: "unset" },
-					}}
-					transition={{ duration: 0.7 }}
-				>
+				<motion.div ref={sidebarRef} transition={{ duration: 0.7 }}>
 					<div className="flex flex-col bg-sidebar min-h-screen w-80 z-30 max-xl:absolute max-xl:left-0 max-xl:top-0">
 						<ProfileContent image={profile} name="Vinicius Luna" />
 						<MenuContent
