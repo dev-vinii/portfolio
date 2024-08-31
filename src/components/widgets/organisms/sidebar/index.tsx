@@ -23,7 +23,7 @@ export default function SideBar() {
 			sidebarRef.current &&
 			!sidebarRef.current.contains(event.target as Node)
 		) {
-			setShowSidebar(false);
+			window.innerWidth <= 1280 && setShowSidebar(false);
 		}
 	};
 
