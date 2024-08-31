@@ -16,6 +16,9 @@ export default function SideBar() {
 
 	const handleClickMenu = (path: string) => {
 		navigate(path);
+		if (window.innerWidth <= 1280) {
+			setShowSidebar(false);
+		}
 	};
 
 	const handleClickOutside = (event: MouseEvent) => {
