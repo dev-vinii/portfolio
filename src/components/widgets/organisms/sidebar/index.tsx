@@ -45,13 +45,19 @@ export default function SideBar() {
 		<>
 			<div className="min-w-screen flex justify-end text-sidebar min-[1281px]:hidden cursor-pointer">
 				<IoIosMenu
-					className={`h-10 w-10 ${showSidebar && "absolute right-1"}`}
+					className={`h-10 w-10 absolute left-0 ${showSidebar && "right-1"}`}
 					onClick={() => setShowSidebar(!showSidebar)}
 				/>
 			</div>
 			{showSidebar && (
-				<motion.div ref={sidebarRef} transition={{ duration: 0.7 }}>
-					<div className="flex flex-col bg-sidebar min-h-screen w-80 z-30 max-xl:absolute max-xl:left-0 max-xl:top-0">
+				<motion.div
+					className="max-xl:absolute z-20"
+					ref={sidebarRef}
+					transition={{ type: "spring", stiffness: 100, damping: 20 }}
+					initial={{ x: -300 }}
+					animate={{ x: 0 }}
+				>
+					<div className="flex flex-col bg-sidebar min-h-screen w-80">
 						<ProfileContent image={profile} name="Vinicius Luna" />
 						<MenuContent
 							path="/"
