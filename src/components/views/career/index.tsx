@@ -21,7 +21,7 @@ export default function Career() {
 
 	return (
 		<div className="flex w-full h-full items-center max-sm:flex-col justify-center">
-			<div className="flex flex-col justify-between w-4/5 gap-10 border-2 p-6 border-black rounded-lg">
+			<div className="flex flex-col justify-between font-oleo w-4/5 gap-10 border-2 p-6 border-black bg-white">
 				{careerData.map((item, i) => (
 					<div className="flex items-center justify-between py-5" key={i}>
 						<div className="flex items-center gap-10">
