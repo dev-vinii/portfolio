@@ -43,7 +43,7 @@ export default function SideBar() {
 
 	return (
 		<>
-			<div className="min-w-screen flex justify-end text-sidebar xl:hidden cursor-pointer">
+			<div className="min-w-screen flex justify-end text-sidebar min-[1281px]:hidden cursor-pointer">
 				<IoIosMenu
 					className={`h-10 w-10 ${showSidebar && "absolute right-1"}`}
 					onClick={() => setShowSidebar(!showSidebar)}
@@ -60,7 +60,7 @@ export default function SideBar() {
 					}}
 					transition={{ duration: 0.7 }}
 				>
-					<div className="bg-sidebar min-h-screen w-80 z-30 max-xl:absolute max-xl:left-0 max-xl:top-0">
+					<div className="flex flex-col bg-sidebar min-h-screen w-80 z-30 max-xl:absolute max-xl:left-0 max-xl:top-0">
 						<ProfileContent image={profile} name="Vinicius Luna" />
 						<MenuContent
 							path="/"
@@ -80,6 +80,10 @@ export default function SideBar() {
 							label="Carreira"
 							onClick={() => handleClickMenu("/career")}
 						/>
+						<section className="flex flex-col items-center text-white text-base font-oleo mt-auto mb-6">
+							<span>(11) 97172-6721</span>
+							<span>viniciusLuna@yahoo.com</span>
+						</section>
 					</div>
 				</motion.div>
 			)}
