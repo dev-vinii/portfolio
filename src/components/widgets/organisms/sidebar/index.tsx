@@ -65,19 +65,19 @@ export default function SideBar() {
 						<MenuContent
 							path="/"
 							icon={<CgProfile className="mr-3" />}
-							label="Profile"
+							label="Perfil"
 							onClick={() => handleClickMenu("/")}
 						/>
 						<MenuContent
 							path="/localization"
 							icon={<GrLocationPin className="mr-3" />}
-							label="Localization"
+							label="Local"
 							onClick={() => handleClickMenu("/localization")}
 						/>
 						<MenuContent
 							path="/career"
 							icon={<BsFillSuitcaseLgFill className="mr-3" />}
-							label="Career"
+							label="Carreira"
 							onClick={() => handleClickMenu("/career")}
 						/>
 					</div>
